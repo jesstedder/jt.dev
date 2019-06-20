@@ -7,14 +7,10 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-2019'
+  vmImage: 'ubuntu-latest'
 
 steps:
-- task: HugoTask@1
-  inputs:
-    source: '$(Build.SourcesDirectory)'
-    destination: '$(Build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)/public'
     artifactName: drop
