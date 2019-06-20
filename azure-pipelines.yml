@@ -10,7 +10,11 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: HugoTask@1
+  inputs:
+    source: '$(Build.SourcesDirectory)'
+    destination: '$(Build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(Build.SourcesDirectory)/public'
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)/public'
     artifactName: drop
