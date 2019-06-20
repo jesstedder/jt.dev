@@ -5,4 +5,4 @@ draft: false
 ---
 
 # Bio
-Live in cincinnati, bike to work.
+Live in cincinnati, bike commuter.
