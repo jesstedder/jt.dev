@@ -16,5 +16,5 @@ steps:
     destination: '$(Build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)/public'
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
     artifactName: drop
